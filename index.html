@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>the blacker the berry</title>
+    <script type="text/javascript" src="wow.min.js"></script>
   </head>
 
 
-  <body>
+  <body onload="scrollDiv_init()">
       <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
 
@@ -50,15 +51,66 @@
 
 
         }
+        audio { 
+    display: none !important;
 
+}
 
       </style>
+
+      <script language="javascript">
+    ScrollRate = 7;
+    
+    function scrollDiv_init() {
+      DivElmnt = document.getElementById('MyDivName');
+      ReachedMaxScroll = false;
+      
+      DivElmnt.scrollTop = 0;
+      PreviousScrollTop  = 0;
+      
+      ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+    }
+    
+    function scrollDiv() {
+      
+      if (!ReachedMaxScroll) {
+        DivElmnt.scrollTop = PreviousScrollTop;
+        PreviousScrollTop++;
+        
+        ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
+      }
+      else {
+        //ReachedMaxScroll = (DivElmnt.scrollTop == 0)?false:true;
+        
+        //DivElmnt.scrollTop = PreviousScrollTop;
+        //PreviousScrollTop--;
+      }
+    }
+    
+    function pauseDiv() {
+      clearInterval(ScrollInterval);
+    }
+    
+    function resumeDiv() {
+      PreviousScrollTop = DivElmnt.scrollTop;
+      ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
+    }
+  </script>
+<div id="MyDivName" style="overflow:auto; width: auto;height:100vh" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
+
+<iframe src="./silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+<audio id="audio" autoplay>
+
+<source src="./bg.mp3">
+
+</audio>
 
 
 
     <section id="bg"></section>
     <section id="M1">
-      <div class="lyric">
+      <div class="wow lyric">
          Everything black, I don't want black they want us to bow<br>
   I want everything black, I ain't need black down to our knees<br>
   Some white, some black, I ain't mean black and pray to the God<br>
@@ -98,7 +150,87 @@
   The blacker the berry, the sweeter the juice<br>
   The blacker the berry, the bigger I shoot<br>
  
+
+ <script>
+    window.onscroll = function(){
+      console.log(document.body.scrollTop);
+      var scrollH = document.body.scrollTop;
+      
+      if (scrollH > 800){
+        s3.style.backgroundAttachment="fixed";
+      }else{
+        s3.style.backgroundAttachment="fixed";
+      }
+
+      if (scrollH > 1300){
+        s4.style.backgroundAttachment="fixed";
+      }else{
+        s4.style.backgroundAttachment="fixed";
+      }
+      if (scrollH >4800){
+        s6.style.backgroundAttachment="scroll";
+      }else{
+        s6.style.backgroundAttachment="fixed";
+        
+      }
+      if (scrollH >5800){
+        s62.style.backgroundAttachment="scroll";      
+      }else{
+        s62.style.backgroundAttachment="fixed"; 
+      }
+      if (scrollH >6800){
+        s63.style.backgroundAttachment="scroll";      
+      }else{
+        s63.style.backgroundAttachment="fixed"; 
+      }
+      if (scrollH >7900){
+        s65.style.backgroundAttachment="scroll";      
+      }else{
+        s65.style.backgroundAttachment="fixed"; 
+      }
+      if (scrollH >7900){
+        s13.style.backgroundAttachment="fixed";     
+      }else{
+        s13.style.backgroundAttachment="fixed"; 
+      }
+
+      if(scrollH > 3300){
+        m1.style.color = "black";
+      }else{
+        m1.style.color = "lightgray";
+      }
+      if(scrollH > 4608){
+        m2.style.color = "black";
+      }else{
+        m2.style.color = "lightgray";
+      }
+      if(scrollH > 6308){
+        m3.style.color = "black";
+      }else{
+        m3.style.color = "lightgray";
+      }
+      if(scrollH > 7908){
+        m4.style.color = "black";
+      }else{
+        m4.style.color = "lightgray";
+      }
+      if(scrollH > 8700){
+        s13.style.backgroundAttachment = "fixed";
+        
+      }else{
+        s13.style.backgroundAttachment="scroll";
+      }
+      if(scrollH > 10308){
+        m5.style.color = "lightgray";
+      }else{
+        m5.style.color = "lightgray";
+      }
+
+    }
+    </script>
       </div>
     </section>
+
+  </div>
   </body>
 </html> 
