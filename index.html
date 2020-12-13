@@ -28,6 +28,171 @@
           position: fixed;
           z-index: 10;
         }
+        .bullet_1 {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+.bullet_1 {position: absolute;
+ top: 300px; left: -500px;}
+
+  .bullet_2 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+.bullet_2 {position: absolute;
+ top: 400px; left: -500px;}
+
+  .bullet_3 {
+  animation-duration: 4s;
+  animation-name: slidein;
+}
+.bullet_3 {position: absolute;
+ top: 450px; left: -500px;}
+  .bullet_4 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+.bullet_4 {position: absolute;
+ top: 500px; left: -500px;}
+
+
+  .bullet_5 {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.bullet_5 {position: absolute;
+ top: 530px; left: -500px;}
+
+
+  .bullet_6 {
+  animation-duration: 6s;
+  animation-name: slidein;
+}
+
+.bullet_6 {position: absolute;
+ top: 600px; left: -500px;}
+
+
+  .bullet_7 {
+  animation-duration: 5s;
+  animation-name: slidein;
+}
+
+.bullet_7 {position: absolute;
+ top: 620px; left: -500px;}
+
+
+  .bullet_8 {
+  animation-duration: 4.5s;
+  animation-name: slidein;
+}
+
+.bullet_8 {position: absolute;
+ top: 700px; left: -500px;}
+
+
+  .bullet_9 {
+  animation-duration: 2.3s;
+  animation-name: slidein;
+}
+.bullet_9 {position: absolute;
+ top: 720px; left: -500px;}
+
+
+  .bullet_10 {
+  animation-duration: 3.4s;
+  animation-name: slidein;
+}
+.bullet_10 {position: absolute;
+ top: 800px; left: -500px;}
+
+
+@keyframes slidein {
+
+  0%{
+    margin-left: 0%;
+   opacity: 100%;
+    width: 300%
+  }
+
+  100% {
+    margin-left: 100%;
+    opacity: 0%;
+    width: 100%;
+  }
+}
+.img_1{position: absolute;
+ top: 930px; left: 150px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_1 {animation: motion 0.3s linear 0s infinite alternate; margin-top: 0;}
+
+.img_2{position: absolute;
+ top: 900px; left: 350px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_2 {animation: motion 0.4s linear 0s infinite alternate; margin-top: 0;}
+
+.img_3{position: absolute;
+ top: 910px; left: 300px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_3 {animation: motion 0.4s linear 0s infinite alternate; margin-top: 0;}
+
+.img_3{position: absolute;
+ top: 990px; left: 550px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_3 {animation: motion 0.5s linear 0s infinite alternate; margin-top: 0;}
+
+.img_4{position: absolute;
+ top: 930px; left: 650px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_4 {animation: motion 0.4s linear 0s infinite alternate; margin-top: 0;}
+
+.img_5{position: absolute;
+ top: 850px; left: 880px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_5 {animation: motion 0.4s linear 0s infinite alternate; margin-top: 0;}
+
+.img_6{position: absolute;
+ top: 950px; left: 1000px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_6 {animation: motion 0.5s linear 0s infinite alternate; margin-top: 0;}
+
+.img_7{position: absolute;
+ top: 900px; left: 1200px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_7 {animation: motion 0.4s linear 0s infinite alternate; margin-top: 0;}
+
+.img_8{position: absolute;
+ top: 920px; left: 1400px;
+text-align: center; margin-top: 20px;
+}
+
+.fist_8 {animation: motion 0.3s linear 0s infinite alternate; margin-top: 0;}
+
+
+
+        
+@keyframes motion {
+  0% {margin-top: 0px;}
+  100% {margin-top: 30px;}
+}
         #M1{
           height: 100%;
             padding: 90vh 15vh;
@@ -55,6 +220,7 @@
     display: none !important;
 
 }
+
 
       </style>
 
@@ -95,22 +261,72 @@
       PreviousScrollTop = DivElmnt.scrollTop;
       ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
     }
+
+
+
   </script>
+
+
 <div id="MyDivName" style="overflow:auto; width: auto;height:100vh" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
 
-<iframe src="./silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-
-<audio id="audio" autoplay>
-
-<source src="./bg.mp3">
-
+  <audio id="track">
+  <source src="bg.mp3" type="audio/mpeg" />
 </audio>
 
+<div id="player-container">
+  <div id="play-pause" class="play"></div>
+</div>
 
 
-    <section id="bg"></section>
+
+    <section id="bg">
+             <div class="bullet_1" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_2" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_3" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_4" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_5" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_6" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_7" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_8" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_9" ><img src="bullet.png" class="bullet"></img></div>
+<div class="bullet_10" ><img src="bullet.png" class="bullet"></img></div>
+    </section>
+
+
+
+
+
+
+
+
     <section id="M1">
+      <div class="img_1" ><img src="img_1.png" class="fist_1"></img>
+
+</div>
+<div class="img_2" ><img src="img_1.png" class="fist_2"></img>
+
+</div>
+<div class="img_3" ><img src="img_1.png" class="fist_3"></img>
+
+</div>
+<div class="img_4" ><img src="img_1.png" class="fist_4"></img>
+
+</div>
+<div class="img_5" ><img src="img_1.png" class="fist_5"></img>
+
+</div>
+<div class="img_6" ><img src="img_1.png" class="fist_6"></img>
+
+</div>
+<div class="img_7" ><img src="img_1.png" class="fist_7"></img>
+
+</div>
+<div class="img_8" ><img src="img_1.png" class="fist_8"></img>
+
+</div>
+
       <div class="wow lyric">
+
          Everything black, I don't want black they want us to bow<br>
   I want everything black, I ain't need black down to our knees<br>
   Some white, some black, I ain't mean black and pray to the God<br>
@@ -123,6 +339,7 @@
   Fire in the street<br>
   Burn, baby, burn<br>
   That's all I wanna see<br>
+
   And sometimes I get off watchin' you die in vain<br>
   It's such a shame they may call me crazy<br>
   They may say I suffer from schizophrenia or somethin', but homie, you made me<br>
@@ -232,5 +449,29 @@
     </section>
 
   </div>
+  <script type="text/javascript">
+  //드래그앤 드롭 코드 시작
+  (function(){
+    var d = false;
+    var target,cx,cy,lx,ly;
+    var t = document.getElementsByClassName("drag");
+    for(var i=0; i<t.length; i++){
+      t[i].style.display = "block";
+      t[i].style.position = "absolute";
+      t[i].style.cursor = "pointer";
+      t[i].ondragstart = function(e){e.preventDefault();};
+      t[i].onmousedown = function(e){ d = true; target = e.target; cx = e.clientX; cy = e.clientY; lx=parseInt(e.target.style.left); ly=parseInt(e.target.style.top);console.log(lx,ly);}
+      t[i].onmouseup = function(){ d = false;}
+      window.onmousemove = function(e){ 
+        if(d){ target.style.left = (lx + e.clientX - cx) + "px"; target.style.top = (ly + e.clientY - cy) + "px";}
+      }
+    }
+  })();
+  //드래그앤 드롭 코드 끝
+
+
+  new WOW().init();
+    console.log("ok");
+  </script>
   </body>
 </html> 
